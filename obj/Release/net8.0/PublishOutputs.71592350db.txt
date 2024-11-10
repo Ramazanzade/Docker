@@ -1,0 +1,5 @@
+C:\Users\ramaz\Downloads\Docker\HelloWorld\publish\HelloWorld.exe
+C:\Users\ramaz\Downloads\Docker\HelloWorld\publish\HelloWorld.dll
+C:\Users\ramaz\Downloads\Docker\HelloWorld\publish\HelloWorld.deps.json
+C:\Users\ramaz\Downloads\Docker\HelloWorld\publish\HelloWorld.runtimeconfig.json
+C:\Users\ramaz\Downloads\Docker\HelloWorld\publish\HelloWorld.pdb
