@@ -13,3 +13,6 @@
 # docker attach ba2 - icinə gir işləyəndə
 
 #docker run -t -d -e "salam=Amar" --name task-1 task_1:v1  - fərqli dəyər mənimsəd
+
+docker rm $(docker ps -a -q)  butun idli containerləri sil
+docker rm $(docker ps -a -q)   butun imageləri sil
