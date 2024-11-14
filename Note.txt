@@ -16,3 +16,9 @@
 
 docker rm $(docker ps -a -q)  butun idli containerləri sil
 docker rm $(docker ps -a -q)   butun imageləri sil
+
+
+# Volume
+# bind mount (filesistemdə yaradırsan) - volume(filesistemdə docker arealda yaradırsan) - tmpfs mount(memoryda yaradaırsan)
+#  docker volume create appdata   - volume yaradırsan 
+# #docker run -t --name container2 -v appdata:/files (container2-nin voluma bağlayırsan)  newtask:v1
