@@ -22,3 +22,26 @@ docker rm $(docker ps -a -q)   butun imageləri sil
 # bind mount (filesistemdə yaradırsan) - volume(filesistemdə docker arealda yaradırsan) - tmpfs mount(memoryda yaradaırsan)
 #  docker volume create appdata   - volume yaradırsan 
 # #docker run -t --name container2 -v appdata:/files (container2-nin voluma bağlayırsan)  newtask:v1
+
+
+Network
+
+docker exec -it container /bin/sh --- interaktiv terminal 
+#docker network inspect 
+#docker network inspect bridge
+
+bridge overlay host null  macvlan ipvlan
+
+#docker network create new_network - yeni sebeke 
+docker network rm new_network - sil
+
+docker network create new_network2 --driver bridge  network deyis
+#docker network connect new_network4 alphine_1 - new_network4 sebekesinin alphine_1 qos
+eksi ile disconnet ile ayir
+
+#docker network create test --driver bridge --subnet=10.0.0.0/24 --ip-range=10.0.0.0/28 --gateway=10.0.0.1
+başqa birinin networkbirinci disconnet(PS C:\Users\ramaz> docker network disconnect bridge alphine_2) elə sonra yeni üçün (PS C:\Users\ramaz> docker network connect test alphine_2) şəbəkəyə bağla
+
+PS C:\Users\ramaz> docker run -it --network test --name alphine_3 alpine:3.20.3  container yaradan kimi network ver
+
+PS C:\Users\ramaz> docker run -it --network test --ip 10.0.0.22 --name alphine_3 alpine:3.20.3  - ozun statik bir ip ver
