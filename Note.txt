@@ -45,3 +45,13 @@ başqa birinin networkbirinci disconnet(PS C:\Users\ramaz> docker network discon
 PS C:\Users\ramaz> docker run -it --network test --name alphine_3 alpine:3.20.3  container yaradan kimi network ver
 
 PS C:\Users\ramaz> docker run -it --network test --ip 10.0.0.22 --name alphine_3 alpine:3.20.3  - ozun statik bir ip ver
+
+mcr.microsoft.com/mssql/server:2022-latest  --mssql server
+#docker run -e "ACCEPT_EULA=Y"--name mssqlserver mcr.microsoft.com/mssql/server:2022-latest --lisenziya ile raziyiq
+#docker run -e "ACCEPT_EULA=Y" -"MSSQL_SA_PASSWORD=!ideqywhiuqw20@2" --name mssqlserver mcr.microsoft.com/mssql/server:2  - parolu gonder
+#docker run -e "ACCEPT_EULA=Y" -"MSSQL_SA_PASSWORD=!ideqywhiuqw20@2" -e "MSSQL_PID=Developer" --name mssqlserver mcr.microsoft.com/mssql/server:2022-latest
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=!ideqywhiuqw20@2" -e "MSSQL_PID=Developer" -p 1433:1433 --name mssqlserver mcr.microsoft.com/mssql/server:2022-latest
+docker exec -it mssqlserver /opt/mssql/bin/sqlservr -U SA -P !ideqywhiuqw20@2 gir
+volumda saxla
+docker volume creat mssqlserver
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=!ideqywhiuqw20@2" -e "MSSQL_PID=Developer" -v mssqlserver(volume server):/var/opt/mssql -p 1433:1433 --name mssqlserver mcr.microsoft.com/mssql/server:2022-latest
