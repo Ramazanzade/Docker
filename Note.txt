@@ -55,3 +55,5 @@ docker exec -it mssqlserver /opt/mssql/bin/sqlservr -U SA -P !ideqywhiuqw20@2 gi
 volumda saxla
 docker volume creat mssqlserver
 docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=!ideqywhiuqw20@2" -e "MSSQL_PID=Developer" -v mssqlserver(volume server):/var/opt/mssql -p 1433:1433 --name mssqlserver mcr.microsoft.com/mssql/server:2022-latest
+
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=!ideqywhiuqw20@2" -e "MSSQL_PID=Developer" -v mssqlserver(volume server):/var/opt/mssql -p 1433:1433 --name mssqlserver mcr.microsoft.com/mssql/server:2022-latest
