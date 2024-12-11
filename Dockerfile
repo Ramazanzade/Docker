@@ -3,5 +3,5 @@ WORKDIR /app
 
 COPY  /bin/Release/net8.0/publish  /app/
 ENV salam="Nizam"
-ENTRYPOINT ["dotnet","HelloWorld.dll"]
+# ENTRYPOINT ["dotnet","HelloWorld.dll"]
 

@@ -56,4 +56,15 @@ volumda saxla
 docker volume creat mssqlserver
 docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=!ideqywhiuqw20@2" -e "MSSQL_PID=Developer" -v mssqlserver(volume server):/var/opt/mssql -p 1433:1433 --name mssqlserver mcr.microsoft.com/mssql/server:2022-latest
 
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=!ideqywhiuqw20@2" -e "MSSQL_PID=Developer" -v mssqlserver(volume server):/var/opt/mssql -p 1433:1433 --name mssqlserver mcr.microsoft.com/mssql/server:2022-latest
+
+MYSQL
+
+#docker run -e "MYSQL_ROOT_PASSWORD=query" -p 3306:3306 --name mysqlserver mysql:latest
+#docker run -e "MYSQL_ROOT_PASSWORD=query" -p 3306:3306 -v myserver:/var/lib/mysql --name mysqlserver mysql:latest
+PS C:\Users\ramaz> docker exec -it mysqlserver mysql -uroot -p -- icine girirsen
+
+postgres
+docker pull ....
+#docker run -e "POSTGRES_PASSWORD=nizam" -p 54320:5432 -v postgresql:/postgresql(yolu duz ver) --name postcontainer postgres:latest
+volume 
+PS C:\Users\ramaz> docker exec -it postcontainer psql -U postgres
